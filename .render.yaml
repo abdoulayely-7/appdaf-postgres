@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: appdaf-postgres
+    env: docker
+    plan: free
+    envVars:
+      - key: POSTGRES_USER
+        value: postgres
+      - key: POSTGRES_PASSWORD
+        value: passer
+      - key: POSTGRES_DB
+        value: appdaf
+    ports:
+      - 5432
