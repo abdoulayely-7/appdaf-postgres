@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: service
     name: appdaf-postgres
     env: docker
     plan: free
@@ -11,4 +11,5 @@ services:
       - key: POSTGRES_DB
         value: appdaf
     ports:
-      - 5432
+      - port: 5432
+        protocol: tcp
